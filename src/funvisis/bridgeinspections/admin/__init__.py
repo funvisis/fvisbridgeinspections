@@ -34,7 +34,7 @@ from funvisis.gallery.admin import FvisGalleryAdmin
 
 from ..models import BridgeInspection
 
-from .bridge import BridgeAdmin
+from .bridgeinspection import BridgeAdmin
 
 admin_site = AdminSite('admin_site')
 
