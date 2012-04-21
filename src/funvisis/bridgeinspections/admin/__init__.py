@@ -30,15 +30,18 @@ from photologue.models import GalleryUpload
 from photologue.models import Photo
 from photologue.admin  import PhotoAdmin
 from photologue.admin  import GalleryAdmin
+from funvisis.geo.bridges.models import Bridge
+from funvisis.geo.bridges.admin import BridgeAdmin
 from funvisis.gallery.admin import FvisGalleryAdmin
 
 from ..models import BridgeInspection
 
-from .bridgeinspection import BridgeAdmin
+from .bridgeinspection import BridgeInspectionAdmin
 
 admin_site = AdminSite('admin_site')
 
-admin_site.register(BridgeInspection, BridgeAdmin)
+admin_site.register(BridgeInspection, BridgeInspectionAdmin)
+admin_site.register(Bridge, BridgeAdmin)
 admin_site.register(Gallery, FvisGalleryAdmin)
 admin_site.register(Photo, PhotoAdmin)
 
